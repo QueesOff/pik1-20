@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.block-1{
+  height: 100vh;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  background-image: url(../img/bg.jpeg);
+  background-size: cover;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+.block-2{
+  width: 100%;
+  height: 100vh;
+  padding: 120px;
+  display: flex;
+  &__img{
+    width: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  &__text{
+    width: 50%;
+    padding: 50px 0 0 50px;
+    
+    h2{
+      color: #000;
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}
+.block-5{
+  width: 100%;
+  height: 130vh;
+  padding: 120px;
+  h1{
+    text-align: center;
+    padding: 0 0 50px 0;
+    font-size: 40px;
+  }
+  &__border{
+    padding: 50px 100px;
+    background-color: #595959;
+    border-radius: 30px;
+    width: 100%;
+    height: 80vh;
+  }
+}
+.swiper {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  border-radius: 30px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.98);
+  &:hover{
+    transform: scale(1);
+    border: 1px solid rgb(159, 159, 159);
+    transition: 0.3s;
+  }
+  &__content{
+    padding: 0 50px;
+    &__img{
+     padding: 10px; 
+     width: 200px;
+      height: 200px;
+     img{
+      border-radius: 50%;
+     }
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next,.swiper-button-prev{
+  opacity: 0;
+  width: 0 ;
+  height: 0;
+}
+.btn{
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 50%;
+  margin-top: 250px;
+  font-size: 20px;
+  border: 1px solid black;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+#myButton2{
+  margin-left: -70px;
+}
+#myButton{
+  margin-left: 1030px;
+}
+.block-6{
+  width: 100%;
+  height: 80vh;
+  padding: 50px 120px;
+  &__border{
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    // background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+    border-radius: 30px;
+    border: 1px solid rgb(77, 77, 77);
+    &__img{
+      width: 50%;
+      img{
+        width: 100%
+      }
+    }
+    &__contact{
+      width: 50%;
+      form{
+        padding: 0 0 0 50px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+input,textarea{
+  width: 370px;
+  height: 40px;
+  border-radius: 3px;
+  outline: none; 
+  border: 0.5px solid grey;
+  font-size: 16px;
+}
+input:hover{
+  border: 1.5px solid #008cff;
+}
+textarea{
+  height: 100px;
+
+}
+#btn2{
+  width: 370px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none; 
+  border: 1.5px solid #313131;
+  font-size: 16px;
+  font-weight: 600;
+  background: #000000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* List */
+#list{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.tableList{
+  margin: auto;
+
+  border-collapse: collapse;
+  width: 90%;
+}
+.tableList tr,td{
+  border: 1px solid rgb(0, 0, 0);
+  padding: 8px;
+  text-align: center;
+}
+.itemAccount{
+  background-color: #fed434;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: #2f2f2f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo{
+  color: #fff;
+}
+.footer-links{
+  display: flex;
+  gap: 35vh;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+a:hover {
+  background-size: 100% 2px;
+}
+.logo{
+  font-size: 40px;
+}
+
+
+// MINI DES
+@media screen and (max-width: 1024px) {
+  .text{
+    h2{
+      font-size: 60px;
+    }
+    p{
+      font-size: 15px;
+    }
+
+    }
+    .block-2{
+      padding: 50px;
+      &__text{
+        h2{
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+    .block-5{
+      padding: 70px;
+      h1{
+        font-size: 26px;
+      }
+    }
+    #myButton{
+      margin-left: 700px;
+    }
+    .swiper-slide{
+      &__content{
+        &__img{
+          width: 150px;
+          height: 150px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      &__border{
+        padding: 40px;
+        &__contact{
+          form{
+            input,textarea, #btn2{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+// PLanshet
+@media screen and (max-width: 768px) {
+  .text{
+    h2{
+      font-size: 50px;
+    }
+    p{
+      font-size: 12px;
+    }
+
+    }
+    .block-2{
+      padding: 20px;
+      &__text{
+        h2{
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+    .block-5{
+      &__border{
+        padding: 20px 60px;
+      }
+      padding: 20px;
+      h1{
+        font-size: 26px;
+      }
+    }
+    #myButton{
+      margin-left: 614px;
+    }
+    #myButton2{
+      margin-left: -56px;
+    }
+
+    .swiper-slide{
+      &__content{
+        &__img{
+          width: 150px;
+          height: 150px;
+          margin: auto;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      padding: 30px 70px;
+      &__border{
+        padding: 40px;
+        &__contact{
+          form{
+            input,textarea, #btn2{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+    .footer-links{
+      gap: 20px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+// Planshet mini
+@media screen and (max-width: 575px){
+  .menu ul li a{
+    font-size: 20px;
+  }
+  .menu{
+    width: 200px;
+  }
+  .showcase.active{
+    right: 200px;
+  }
+  .text{
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 10px;
+    }
+
+    }
+    .block-2{
+      padding: 20px;
+      flex-direction: column;
+      margin-bottom: 300px;
+      &__img{
+        margin: auto;
+        width: 80%;
+      }
+      &__text{ 
+        width: 100%;
+        h2{
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 10px;
+          margin-bottom: 50px;
+        }
+
+      }
+    }
+    .block-5{
+      height: 115vh;
+      &__border{
+        padding: 0;
+
+      }
+      padding: 20px;
+      h1{
+        font-size: 20px;
+      }
+    }
+    .btn{
+      display: none;
+    }
+    #myButton{
+      margin-left: 425px;
+    }
+    #myButton2{
+      margin-left: -56px;
+    }
+    .swiper-slide swiper-slide{
+      border-radius: 30px;
+      border: 1px solid black;
+    }
+    .swiper-slide{
+      padding: 100px 0;
+      &__content{
+
+        &__img{
+          margin: auto;
+          width: 150px;
+          height: 150px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      padding: 30px 70px;
+      &__border{
+        padding: 40px;
+        &__img{
+          display: none;
+        }
+        &__contact{
+          form{
+            input,textarea, #btn2{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+    .footer-links{
+      ul{
+        display: flex;
+        flex-direction: column;
+      }
+      gap: 40px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+// Mobile big
+@media screen and (max-width:425px){
+  text{
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 10px;
+    }
+
+    }
+    .block-2{
+      padding: 20px;
+      flex-direction: column;
+      margin-bottom: 300px;
+      &__img{
+        margin: auto;
+        width: 80%;
+      }
+      &__text{ 
+        width: 100%;
+        h2{
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 10px;
+          margin-bottom: 50px;
+        }
+
+      }
+    }
+    .block-5{
+      height: 115vh;
+      &__border{
+        padding: 20px 60px;
+      }
+      padding: 20px;
+      h1{
+        font-size: 20px;
+      }
+    }
+    #myButton{
+      margin-left: 270px;
+    }
+    #myButton2{
+      margin-left: -56px;
+    }
+
+    .swiper-slide{
+      &__content{
+        &__img{
+          margin: auto;
+          width: 150px;
+          height: 150px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      padding: 30px 70px;
+      &__border{
+        padding: 40px;
+        &__img{
+          display: none;
+        }
+        &__contact{
+          form{
+            padding: 0;
+            input,textarea, #btn2{
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+    .footer-links{
+      ul{
+        display: flex;
+        flex-direction: column;
+      }
+      gap: 40px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+// Mobile medium
+@media screen and (max-width: 375px){
+  text{
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 10px;
+    }
+
+    }
+    #ppp{
+      margin: 0;
+    }
+    .block-2{
+      padding: 20px;
+      flex-direction: column;
+      margin-bottom: 200px;
+      &__img{
+        margin: auto;
+        width: 80%;
+      }
+      &__text{ 
+        width: 100%;
+        h2{
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 10px;
+          margin-bottom: 50px;
+        }
+
+      }
+    }
+    .block-5{
+      height: 115vh;
+      &__border{
+        padding: 20px;
+      }
+      padding: 20px;
+      h1{
+        font-size: 20px;
+      }
+    }
+    #myButton{
+      margin-left: 220px;
+    }
+    #myButton2{
+      margin-left: -56px;
+    }
+
+    .swiper-slide{
+      &__content{
+        &__img{
+          margin: auto;
+          width: 150px;
+          height: 150px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      padding: 30px;
+      &__border{
+        padding: 40px;
+        &__img{
+          display: none;
+        }
+        &__contact{
+          form{
+            padding: 0;
+            input,textarea, #btn2{
+              width: 240px;
+            }
+          }
+        }
+      }
+    }
+    .footer-links{
+      ul{
+        display: flex;
+        flex-direction: column;
+      }
+      gap: 40px;
+    a {
+      font-size: 14px;
+    }
+  }
+
+}
+// Mobile mini{
+@media screen and (max-width: 320px){
+  text{
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 10px;
+    }
+
+    }
+    #ppp{
+      margin: 0;
+    }
+    .block-2{
+      padding: 20px;
+      flex-direction: column;
+      margin-bottom: 250px;
+      &__img{
+        margin: auto;
+        width: 80%;
+      }
+      &__text{ 
+        width: 100%;
+        padding: 20px;
+        h2{
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 10px;
+          margin-bottom: 50px;
+        }
+
+      }
+    }
+    .block-5{
+      height: 115vh;
+      &__border{
+        padding: 20px;
+      }
+      padding: 20px;
+      h1{
+        font-size: 20px;
+      }
+    }
+    #myButton{
+      margin-left: 220px;
+    }
+    #myButton2{
+      margin-left: -56px;
+    }
+
+    .swiper-slide{
+      &__content{
+        &__img{
+          margin: auto;
+          width: 150px;
+          height: 150px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .block-6{
+      padding: 30px;
+      &__border{
+        padding: 20px;
+        &__img{
+          display: none;
+        }
+        &__contact{
+          form{
+            padding: 0;
+            input,textarea, #btn2{
+              width: 220px;
+            }
+          }
+        }
+      }
+    }
+    .logo{
+      font-size: 30px;
+    }
+    .footer-links{
+      ul{
+        display: flex;
+        flex-direction: column;
+      }
+      gap: 40px;
+    a {
+      font-size: 14px;
+    }
+  }
+}

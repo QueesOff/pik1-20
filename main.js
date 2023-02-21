@@ -64,7 +64,7 @@ var swiper = new Swiper(".mySwiper", {
     saveData(data);
   })
   function saveData(data) {
-    fetch("http://localhost:8080/users", {
+    fetch("https://daimengger.github.io/pik1-20/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }

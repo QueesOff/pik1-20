@@ -57,7 +57,7 @@ header .logo {
   justify-content: space-between;
   align-items: center;
   background: #111;
-  background-image: url(../img/bg.jpeg);
+  background-image: url(./img/bg.jpeg);
   background-size: cover;
   transition: 0.5s;
   z-index: 2;

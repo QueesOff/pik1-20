@@ -524,6 +524,12 @@ a:hover {
   }
 }
 @media screen and (max-width: 575px) {
+  #ord{
+    order: 1;
+  }
+  #ord2{
+    order: 2;
+  }
   .menu ul li a {
     font-size: 20px;
   }

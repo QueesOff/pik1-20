@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "server": "https://daimengger.github.io/pik1-20/ --watch db.json"
+    "server": "https://daimengger.github.io/pik1-20/ db.json"
   },
   "author": "",
   "license": "ISC",

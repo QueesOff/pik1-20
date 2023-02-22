@@ -64,7 +64,7 @@ var swiper = new Swiper(".mySwiper", {
     saveData(data);
   })
   function saveData(data) {
-    fetch("db.json/users", {
+    fetch("users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
